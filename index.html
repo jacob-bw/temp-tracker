@@ -9,9 +9,30 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <h1>Temperature Converter</h1>
-    <div id="input-zone"></div>
-    <div id="temp-zone"></div>
+    <h1 align="center" class="text-center" id="input-zone">Temperature Converter</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <div align="center" class="form-group form-control-md">
+                    <p><label class="radio-inline justify-center" ><input type="radio" name="optradio" id="radioC">Convert from C°</label></p>
+                    <p><label class="radio-inline justify-center" ><input type="radio" name="optradio" id="radioF">Convert from F°</label></p>
+                    <h4><label for="tempInputField">Temperature to Convert</label></h4>
+                    <input class="form-control" id="tempInputField" placeholder="Enter Temperature Here">
+
+                    <div align="center" class="button-zone">
+                        <button type="button" class="btn btn-primary btn-md-3" id="convert">Convert</button>
+                    </div>
+                    <div align="center" class="card col" id="displayCard">
+                        <div class="card-body" id="temp-zone"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
 </html>
