@@ -24,12 +24,24 @@ const toCelsius =  () => {
 };
 
 //function to convert to farenheit
-//const toFahrenheit =  () => {
-
-//}
+const toFahrenheit =  () => {
+let inputTemp = document.getElementById('tempInputField');
+  let temp = inputTemp.value;
+  console.log(temp);
+  let domString = '';
+  domString = `
+  <div class="card col-md-4">
+    <div class="card-body">
+      <h5 class="card-title">${temp}</h5>
+      <button class="btn btn-primary">Clear</button>
+    </div>
+  </div>
+  `
+  printToDOM(domString, 'temp-zone')
+};
 
 // Get a reference to the button element in the DOM
-//const button = document.getElementById(toCelsius, 'convert');
+const button = document.getElementById('radioC');
 
 // This function should determine which conversion should
 // happen based on which radio button is selected.
