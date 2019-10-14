@@ -4,35 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
     <title>Temperature Converter</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <h1 align="center" class="text-center" id="input-zone">Temperature Converter</h1>
     <div class="container">
-        <div class="row">
-            <div class="col-md">
-                <div align="center" class="form-group form-control-md">
-                    <p><label class="radio-inline justify-center" ><input type="radio" name="optradio" id="radioC">Convert from C°</label></p>
-                    <p><label class="radio-inline justify-center" ><input type="radio" name="optradio" id="radioF">Convert from F°</label></p>
-                    <h4><label for="tempInputField">Temperature to Convert</label></h4>
-                    <input class="form-control" id="tempInputField" placeholder="Enter Temperature Here">
-
-                    <div align="center" class="button-zone">
-                        <button type="button" class="btn btn-primary btn-md-3" id="convert">Convert</button>
-                    </div>
-                    <div align="center" class="card col" id="displayCard">
-                        <div class="card-body" id="temp-zone"></div>
-                    </div>
+        <div>
+            <div class="form-group form-control-lg col" id="radio-zone">
+                <h1><label for="exampleFormControlInput1">Temperature Converter</label></h1>
+                <p><label class="radio-inline justify-center" ><input type="radio" name="optradio" id="radioC">Convert to C°</label></p>
+                <p><label class="radio-inline justify-center" ><input type="radio" name="optradio" id="radioF">Convert to F°</label></p>
+                <input type="temperature" class="form-control" id="exampleFormControlInput1" placeholder="Enter Temperature to Convert Here">
+        
+                <div>
+                    <div class="card-body" id="convertedTemp"></div>
                 </div>
+        
+                <button type="button" class="btn btn-success btn-lg" id="convert">Convert</button>
+                <button type="button" class="btn btn-dark btn-lg" id="clear">Clear</button>
             </div>
         </div>
     </div>
-   
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+
+    <script src="main.js"></script>
 </body>
 </html>

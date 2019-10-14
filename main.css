@@ -1,5 +1,13 @@
-/* changing background color to make sure css is linked appropriately */
-
 body {
     background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
+    margin: 10%;
+};
+
+.container {
+    display: flex;
 };

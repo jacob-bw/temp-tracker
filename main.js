@@ -1,54 +1,66 @@
-console.log("This is to test if the pages are linked correctly");
-
-//
-const printToDOM = (textToPrint, divID) => {
-    document.getElementById(divID).innerHTML = textToPrint;
-  };  
-
-
-//function to convert to celsius
-const toCelsius =  () => {
-  let inputTemp = document.getElementById('tempInputField');
-  let temp = inputTemp.value;
-  console.log(temp);
-  let domString = '';
-  domString = `
-  <div class="card col-md-4">
-    <div class="card-body">
-      <h5 class="card-title">${temp}</h5>
-      <button class="btn btn-primary">Clear</button>
-    </div>
-  </div>
-  `
-  printToDOM(domString, 'temp-zone')
+const printToDom = (toPrint, divId) => {
+  document.getElementById(divId).innerHTML = toPrint;
 };
 
-//function to convert to farenheit
-const toFahrenheit =  () => {
-let inputTemp = document.getElementById('tempInputField');
-  let temp = inputTemp.value;
-  console.log(temp);
-  let domString = '';
-  domString = `
-  <div class="card col-md-4">
-    <div class="card-body">
-      <h5 class="card-title">${temp}</h5>
-      <button class="btn btn-primary">Clear</button>
-    </div>
-  </div>
-  `
-  printToDOM(domString, 'temp-zone')
+const toCelsius = () => {
+  let domString = "";
+  let formInput =
+    ((document.getElementById("exampleFormControlInput1").value - 32) * 5) / 9;
+  let celsius = Math.round(formInput);
+  domString += `
+      <div class='card col-md-4'>
+        <div class='card-body'>
+        <h3 class='card-title'>${celsius}</h3>
+        </div>
+      </div>
+    `;
+  printToDom(domString, "convertedTemp");
+  if (celsius > 32) {
+    document.getElementById("convertedTemp").style.color = "red";
+  } else if (celsius < 0) {
+    document.getElementById("convertedTemp").style.color = "blue";
+  } else {
+    document.getElementById("convertedTemp").style.color = "green";
+  }
 };
 
-// Get a reference to the button element in the DOM
-const button = document.getElementById('radioC');
+const toFahrenheit = () => {
+  let domString = "";
+  let formInput =
+    (document.getElementById("exampleFormControlInput1").value * 9) / 5 + 32;
+  let fahrenheit = Math.round(formInput);
+  domString += `
+      <div class='card col-md-4'>
+        <div class='card-body'>
+        <h3 class='card-title'>${fahrenheit}</h3>
+        </div>
+      </div>
+    `;
+  printToDom(domString, "convertedTemp");
+  if (fahrenheit > 90) {
+    document.getElementById("convertedTemp").style.color = "red";
+  } else if (fahrenheit < 32) {
+    document.getElementById("convertedTemp").style.color = "blue";
+  } else {
+    document.getElementById("convertedTemp").style.color = "green";
+  }
+};
 
-// This function should determine which conversion should
-// happen based on which radio button is selected.
-//const determineConverter = (e) => {
-  //console.log("event", e);
-//}
+const determineConverter = e => {
+  if (document.getElementById("radioF").checked) {
+    toFahrenheit();
+  } else if (document.getElementById("radioC").checked) {
+    toCelsius();
+  }
+};
 
-// Assign a function to be executed when the button is clicked
-//button.addEventListener("click", determineConverter);
-document.getElementById('convert').addEventListener('click', toCelsius);
+const clearConverter = e => {
+  printToDom([], "convertedTemp");
+  document.getElementById("exampleFormControlInput1").value = "";
+};
+
+const convertButton = document.getElementById("convert");
+const clearButton = document.getElementById("clear");
+
+convertButton.addEventListener("click", determineConverter);
+clearButton.addEventListener("click", clearConverter);
