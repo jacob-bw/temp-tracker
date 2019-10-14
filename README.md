@@ -4,9 +4,9 @@
 > Web app for converting celsius to farenheit and vice versa
 
 ## Screenshots
-[screenshot of temp conversion green]()
-[screenshot of temp conversion blue]()
-[screenshot of temp conversion red]()
+![screenshot of default page](https://raw.githubusercontent.com/jacob-bw/temp-tracker/master/screenshots/temp-converter-1.png)
+![screenshot of temp conversion from Farenheit](https://raw.githubusercontent.com/jacob-bw/temp-tracker/master/screenshots/temp-converter-2.png)
+![screenshot of temp conversion from Celsius](https://raw.githubusercontent.com/jacob-bw/temp-tracker/master/screenshots/temp-converter-3.pnghttps://raw.githubusercontent.com/jacob-bw/temp-tracker/master/screenshots/temp-converter-3.png)
 
 # Instructions on How to Run
 * clone down this project
@@ -21,3 +21,5 @@
 * HTML
 * CSS
 * Vanilla JavaScript
+* Bootstrap
+* Flexbox
