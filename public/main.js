@@ -8,7 +8,7 @@ const toCelsius = () => {
     ((document.getElementById("exampleFormControlInput1").value - 32) * 5) / 9;
   let celsius = Math.round(formInput);
   domString += `
-      <div class='card col-md-4'>
+      <div class='card col-md-4 justify-center'>
         <div class='card-body'>
         <h3 class='card-title'>${celsius}</h3>
         </div>
@@ -30,7 +30,7 @@ const toFahrenheit = () => {
     (document.getElementById("exampleFormControlInput1").value * 9) / 5 + 32;
   let fahrenheit = Math.round(formInput);
   domString += `
-      <div class='card col-md-4'>
+      <div class='card col-md-4 justify-center'>
         <div class='card-body'>
         <h3 class='card-title'>${fahrenheit}</h3>
         </div>

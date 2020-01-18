@@ -11,3 +11,8 @@ body {
 .container {
     display: flex;
 };
+
+#convertedTemp {
+    display: flex;
+    justify-content: center;
+}
