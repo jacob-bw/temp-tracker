@@ -1,5 +1,4 @@
-# Temperature Converter - Group Project
-
+# Temperature Converter
 ## Description
 > Web app for converting celsius to farenheit and vice versa
 
